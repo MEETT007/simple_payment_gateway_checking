@@ -162,7 +162,7 @@
             const paymentUrl = document.getElementById('paymentUrl');
             const paymentLink = document.getElementById('paymentLink');
 
-            const API_KEY = 'aa552936-5e50-448d-a755-84c285a89415';
+            const API_KEY = '43acd4a3-3858-4a8f-81ce-6516a07b0f6b'; // Updated API key
 
             paymentForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
@@ -175,8 +175,11 @@
                 statusMessage.textContent = 'Initiating payment...';
                 loadingSpinner.classList.remove('hidden');
 
+                // NOTE: In a real application, this part of the code would be on a secure backend server.
+                // The front-end would only send the form data to the backend. The backend would then
+                // make the API call using the private API key and handle the response securely.
+                
                 // Simulate the 'create_order' API call response directly
-                // In a real application, this would be a secure fetch call to a backend server.
                 const mockApiResponse = {
                     status: true,
                     msg: 'Order Created',
